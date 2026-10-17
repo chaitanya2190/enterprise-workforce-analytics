@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Workforce Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Talent AI</h2>
+            </div>
+            <nav class="menu">
+                <a href="#tier1" class="active">Executive Overview</a>
+                <a href="#tier2">Departmental Analysis</a>
+                <a href="#tier3">Risk & Actions</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Predictive Talent Retention System</h1>
+                <div class="user-profile">
+                    <span>Admin</span>
+                </div>
+            </header>
+
+            <!-- Tier 1: Executive Overview -->
+            <section id="tier1" class="tier-section active">
+                <h2>Tier 1: Executive Overview (Macro-Level)</h2>
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <h3>Total Headcount</h3>
+                        <p class="kpi-value" id="total-headcount">8,000</p>
+                    </div>
+                    <div class="kpi-card alert">
+                        <h3>Annualized Attrition</h3>
+                        <p class="kpi-value" id="attrition-rate">14.2%</p>
+                        <p class="kpi-subtext">Target: 10.0% - 12.0%</p>
+                    </div>
+                    <div class="kpi-card">
+                        <h3>Macro Productivity Index</h3>
+                        <p class="kpi-value" id="productivity-index">85.4</p>
+                    </div>
+                    <div class="kpi-card">
+                        <h3>Revenue per FTE</h3>
+                        <p class="kpi-value" id="revenue-fte">$342k</p>
+                        <p class="kpi-subtext">Target: >$300k</p>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="attritionChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Tier 2: Departmental Intersectional Analysis -->
+            <section id="tier2" class="tier-section">
+                <h2>Tier 2: Departmental Analysis</h2>
+                <div class="chart-container large">
+                    <canvas id="scatterChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Tier 3: Risk & Prescriptive Action -->
+            <section id="tier3" class="tier-section">
+                <h2>Tier 3: Risk & Prescriptive Action (P > 0.70)</h2>
+                <table class="risk-table">
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Tenure (Yrs)</th>
+                            <th>Compa-Ratio (CR)</th>
+                            <th>Overtime Ratio (OTR)</th>
+                            <th>Risk Score (P)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="risk-table-body">
+                        <!-- Populated via JS -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
