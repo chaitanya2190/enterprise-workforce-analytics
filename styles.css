@@ -235,19 +235,29 @@ select:focus-visible {
   flex-shrink: 0;
 }
 
+.logo-title-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
 .logo-text {
   font-size: var(--text-xl);
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 
 .logo-subtext {
-  font-size: var(--text-xs);
+  font-size: 0.65rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-top: -4px;
+  font-weight: 600;
+  margin-top: 2px;
+  line-height: 1;
 }
 
 /* Menu */
